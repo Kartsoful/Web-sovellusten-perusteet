@@ -1,3 +1,16 @@
+:root {
+    --sidebar-width: min(15%, 200px);
+}
+
+@keyframes wave {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -7,29 +20,31 @@ body {
 .sidebar {
     background-color: #a5a5a5;
     padding: 0.5em;
-    width: 15%;
+    width: var(--sidebar-width);
     position: fixed;
     right: 0;
     top: 0;
-    width: 15%;
     height: 100vh;
 }
 
 .sidebar ul {
     list-style-type: none;
-    float: left;
     margin: 0;
     padding: 0;
     width: 100%;
 }
-.sidebar a {
+.sidebar li a {
     text-decoration: none;
     color: black;
     display: block;
 }
+
 .sidebar a:hover {
-    font-weight: bold;
-    color: white;
+    background: linear-gradient(90deg, rgb(0, 0, 0), red, rgb(0, 0, 0));
+    background-size: 200% 100%;
+    animation: wave 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sidebar h2 {
@@ -43,10 +58,9 @@ body {
 }
 
 .header {
-    background: linear-gradient(to right, #565656, #a5a5a5);
+    background: linear-gradient(to right, #565656, #aaaaaa);
     padding: 1em;
-    width: 85%;
-    margin-right: 15%;
+    margin-right: var(--sidebar-width);
     margin-top: 0;
     margin-left: 0;
 }
@@ -58,8 +72,8 @@ body {
 }
 
 .content {
-    background: linear-gradient(to right, #ebebeb, #8e8e8e);
-    margin-right: 15%;
+    background: linear-gradient(to right, #eeeeee, #aaaaaa);
+    margin-right: var(--sidebar-width);
     padding: 1em;
     min-height: 100vh;
 }
@@ -88,4 +102,58 @@ body {
     color: #555;
     margin-top: 0.5em;
     text-align: center;
+}
+
+.weather-container {
+    align-items: center;
+    text-align: center;
+    margin: 2em;
+    padding: 2em;
+}
+
+.weather-data {
+    background-color: rgba(175, 198, 219, 0.95);
+    border: 1px solid #ca621d;
+    border-radius: 40px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    padding: 2em;
+    width: min(65%, 500px);
+    margin: auto;
+}
+
+.weather-data p {
+    font-size: 1.3em;
+    border: none;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.weather-data img {
+    width: 100px;
+    height: 100px;
+}
+
+#city-input {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#city-input-btn {
+    padding: 10px;
+    background-color: #69747c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#city-input-btn:hover {
+    background: linear-gradient(90deg, #69747c, rgb(42, 155, 175), #69747c);
+    background-size: 200% 100%;
+    animation: wave 2s linear infinite;
 }
