@@ -1,0 +1,91 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #a5a5a5;
+    padding: 0.5em;
+    width: 15%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 15%;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.sidebar a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar li {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.header {
+    background: linear-gradient(to right, #565656, #a5a5a5);
+    padding: 1em;
+    width: 85%;
+    margin-right: 15%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.header h1 {
+    font-size: 2em;
+    color: white;
+    margin-left: 2em;
+}
+
+.content {
+    background: linear-gradient(to right, #ebebeb, #8e8e8e);
+    margin-right: 15%;
+    padding: 1em;
+    min-height: 100vh;
+}
+
+.content p {
+    line-height: 1.6;
+    border: 1px solid #ca621d;
+    border-radius: 20px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.content h3 {
+    font-size: 1.5em;
+    margin-left: 1.5em;
+    margin-top: 1em;
+}
+
+.content img {
+    max-width: 80%;
+    max-height: 100px;
+}
+
+#imgtext{
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.5em;
+    text-align: center;
+}
